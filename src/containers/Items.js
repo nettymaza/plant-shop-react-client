@@ -1,18 +1,34 @@
-import React from 'react';
-import './Items.css'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const Items = (props) => (
-  <div className="PlantsContainer">
-    <h2>Plants</h2>
-    {props.items.map(item =>
-      <div key={item.id} className="ItemCard">
-        <h3>{item.name}</h3>
-        <h4>Price: ${item.price}</h4>
-        <img className="PlantImage" src={item.img_url} alt={item.name} />
-        <h4>Likes: {item.likes}</h4>
+import ItemCard from '../components/ItemCard';
+import ItemForm from './ItemForm';
+import { getItems } from '../actions/items';
+import './Items.css';
+
+class Items extends Component {
+
+  componentDidMount() {
+    this.props.getItems()
+  }
+
+  render() {
+    return (
+      <div className="PlantsContainer">
+        <h2>Todays Plants</h2>
+        {this.props.items.map(item => < ItemCard key={item.id} item={item} />)}
+
       </div>
-    )}
-  </div>
-);
+    );
+  }
+}
+// Include this on line 20
+// <ItemForm />
 
-export default Items;
+const mapStateToProps = (state) => {
+  return ({
+    items: state.items
+  })
+}
+
+export default connect(mapStateToProps, { getItems })(Items);
