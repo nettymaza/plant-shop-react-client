@@ -22,6 +22,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// React Components As Routes Lab
