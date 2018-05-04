@@ -1,9 +1,9 @@
 export default (state = [], action) => {
   switch(action.type) {
-    case 'GET_ITEMS_SUCCESS':
+    case 'FETCH_ITEMS':
       return action.items;
 
-    case 'CREATE_ITEM_SUCCESS':
+    case 'ADD_ITEM':
       return state.concat(action.item);
 
     default:
