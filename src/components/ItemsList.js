@@ -11,7 +11,6 @@ const ItemsList = ({ items }) => {
     </Link>
   );
 
-
   return (
     <div>
       {renderItems}

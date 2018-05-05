@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import { getItems } from '../actions/items';
 
 import ItemsList from '../components/ItemsList';
 import DetailPage from '../components/DetailPage';
-// import ItemForm from './ItemForm';
+import ItemForm from './ItemForm';
 import './Items.css';
 
 class ItemsPage extends Component {
@@ -21,9 +21,11 @@ class ItemsPage extends Component {
     return (
       <div className="PlantsContainer">
         <ItemsList items={items} />
-        <Route path={`${match.url}/:itemId`} component={DetailPage}/>
+        <Switch>
+          <Route path={`${match.url}/new`} component={ItemForm} />
+          <Route path={`${match.url}/:itemId`} component={DetailPage}/>
+        </Switch>
       </div>
-      // {<ItemForm />}
     );
   }
 }

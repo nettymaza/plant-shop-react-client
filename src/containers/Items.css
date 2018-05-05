@@ -45,3 +45,35 @@
   width : 300px;
   height: 300px;
 }
+
+.FormDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+  width: 100%;
+
+}
+
+.FormDiv h3 {
+  margin: 25px;
+  font-size: 24px;
+  color: #354223;
+}
+
+.FormDiv button {
+  margin: 50px;
+}
+
+.FormInput {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 80%;
+  text-align: left;
+  }
+
+.FormInput input {
+  display: inline-block;
+  float: right;
+}
