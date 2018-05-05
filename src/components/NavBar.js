@@ -11,3 +11,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+  // <NavLink  style={{ marginRight: '10px' }} to="/items/new"> Add Plant</NavLink>

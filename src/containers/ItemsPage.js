@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
 import { getItems } from '../actions/items';
 
 import ItemsList from '../components/ItemsList';
@@ -16,13 +17,11 @@ class ItemsPage extends Component {
 
   render() {
     const { match, items } = this.props;
+
     return (
       <div className="PlantsContainer">
         <ItemsList items={items} />
         <Route path={`${match.url}/:itemId`} component={DetailPage}/>
-        <Route exact path={match.url} render={() => (
-        <h3>Select Item from list</h3>
-        )}/>
       </div>
       // {<ItemForm />}
     );
