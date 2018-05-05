@@ -1,15 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', margin: '18px' }}>
-      <NavLink  style={{ marginRight: '10px' }} to="/">Home</NavLink>
-      <NavLink  style={{ marginRight: '10px' }} to="/items">Plants</NavLink>
+    <div className="NavBar">
+      <NavLink  className="NavLink" to="/">Home</NavLink>
+      <NavLink  className="NavLink" to="/items">Plants</NavLink>
+      <NavLink  className="NavLink" to="/items/new"> Add Plant</NavLink>
     </div>
   );
 };
 
 export default NavBar;
-
-  // <NavLink  style={{ marginRight: '10px' }} to="/items/new"> Add Plant</NavLink>

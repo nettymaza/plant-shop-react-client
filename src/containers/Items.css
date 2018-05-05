@@ -1,23 +1,4 @@
-.ItemContainer {
-  padding: 16px;
-}
-
-.ItemCard {
-  float: left;
-  margin: 6px;
-  background: whitesmoke;
-  width: 30%;
-  height: 50px;
-  height: 400px;
-}
-
-.ItemCard:hover {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-.PlantImage {
-  width: 70%;
-}
+/* ////ITEMSLIST////// */
 
 .ItemList {
   float: left;
@@ -25,5 +6,42 @@
   background: whitesmoke;
   width: 30%;
   height: 50px;
-  height: 50px;
+}
+
+.ItemList:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.ItemList h3 {
+  text-decoration: none;
+  font-size: 16px;
+  color: #354223;
+}
+
+/* ////ITEMCARD////// */
+
+.ItemCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 100px 0;
+  width: 100%;
+}
+
+.ItemCard h3 {
+  font-size: 24px;
+  color: #354223;
+  margin: 0;
+}
+
+.ItemCard p {
+  max-width: 400px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.ItemCard img {
+  width : 300px;
+  height: 300px;
 }

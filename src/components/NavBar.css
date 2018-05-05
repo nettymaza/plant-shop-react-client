@@ -1,0 +1,13 @@
+.NavBar {
+  margin: 20px;
+  border-bottom: 2px solid black;
+}
+
+.NavLink {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #354223;
+  margin: 20px 20px 20px 20px;
+
+}

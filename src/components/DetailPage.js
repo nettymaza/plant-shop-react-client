@@ -4,8 +4,10 @@ import { connect } from 'react-redux';
 const DetailPage = ({ item })=> {
 
   return (
-    <div>
+    <div className="ItemCard">
       <h3>{item.name}</h3>
+      <p>{item.info}</p>
+      <img src={item.img_url} alt={item.name}/>
     </div>
   );
 }
