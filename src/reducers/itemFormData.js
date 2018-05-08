@@ -2,11 +2,11 @@ const initialState = {
   name: '',
   info: '',
   img_url: '',
-  formErrors: {name: '', info: ''},
-  nameValid: false,
-  infoValid: false,
-  formValid: false,
 }
+// formErrors: {name: '', info: ''},
+// nameValid: false,
+// infoValid: false,
+// formValid: false,
 
 export default (state = initialState, action) => {
 

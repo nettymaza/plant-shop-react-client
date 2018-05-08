@@ -54,8 +54,6 @@ To run this application run `yarn start` from the command line, browser window w
 
 ## Contributing
 
-The app is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>
-
 Bug reports and pull requests are welcome on GitHub at https://github.com/nettymaza/plant-shop-react-client.
 
 This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="https://www.contributor-covenant.org/">Contributor Covenant</a> code of conduct.
