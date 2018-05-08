@@ -1,6 +1,6 @@
 # Plantitas Garden Info Client ReactJS Project
 
-This project is intended to help familiarize your way through the ReactJs framework, component creating, rendering and importing/exporting. This app, still in progress is a simple garden almanac which contains plant descriptions, growing instructions, site and soil requirements.
+This project is intended to help familiarize your way through the ReactJS framework, component creating, rendering and importing/exporting. This app, still in progress is a simple garden almanac which contains plant descriptions, growing instructions, site and soil requirements.
 
 ## Installation
 
