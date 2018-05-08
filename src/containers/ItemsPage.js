@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 
-import { getItems } from '../actions/items';
+import { fetchItems } from '../actions/items';
 
 import ItemsList from '../components/ItemsList';
 import DetailPage from '../components/DetailPage';
@@ -12,7 +12,7 @@ import './Items.css';
 class ItemsPage extends Component {
 
   componentDidMount() {
-    this.props.getItems()
+    this.props.fetchItems()
   }
 
   render() {
@@ -36,4 +36,4 @@ const mapStateToProps = state => {
   };
 }
 
-export default connect(mapStateToProps, { getItems })(ItemsPage);
+export default connect(mapStateToProps, { fetchItems })(ItemsPage);

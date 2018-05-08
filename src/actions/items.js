@@ -18,7 +18,7 @@ const addItem = item => {
 }
 
 // **Async Actions**
-export const getItems = () => {
+export const fetchItems = () => {
   return dispatch => {
     return fetch(`${API_URL}/items`)
       .then(response => response.json())
@@ -26,6 +26,7 @@ export const getItems = () => {
       .catch(error => console.log(error));
   }
 }
+
 
 export const createItem = item => {
   return dispatch => {

@@ -1,22 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const ItemsList = ({ items }) => {
-
-  const renderItems = items.map(item =>
-    <Link key={item.id} to={`/items/${item.id}`}>
-      <div className="ItemList">
-        <h3>{item.name}</h3>
-      </div>
-    </Link>
-  );
-
-
-  return (
-    <div>
-      {renderItems}
-    </div>
-  );
-};
-
-export default ItemsList;
+// export const validateField = (fieldName, value) => {
+//   let fieldValidationErrors = this.state.formErrors;
+//   let nameValid = this.state.nameValid;
+//   let infoValid = this.state.infoValid;
+//
+//   switch(fieldName) {
+//     case 'name':
+//       nameValid = value.length > 0;
+//       fieldValidationErrors.name = nameValid ? '' : ' is invalid';
+//       break;
+//     case 'info':
+//       infoValid = value.length >= 6;
+//       fieldValidationErrors.info = infoValid ? '': ' is too short';
+//       break;
+//     default:
+//       break;
+//   }
+//   this.setState({formErrors: fieldValidationErrors,
+//     nameValid: nameValid,
+//     infoValid: infoValid
+//   }, this.validateForm);
+// }
+//
+// const validateForm = () => {
+//   this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+// }

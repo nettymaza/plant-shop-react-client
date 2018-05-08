@@ -6907,6 +6907,10 @@ value-equal@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/value-equal/-/value-equal-0.4.0.tgz#c5bdd2f54ee093c04839d71ce2e4758a6890abc7"
 
+valuelink@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/valuelink/-/valuelink-1.5.5.tgz#c5eff9e2f5c184ba25c4f4ece2b1138b31e3008e"
+
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"

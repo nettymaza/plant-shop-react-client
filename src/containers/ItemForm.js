@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateItemFormData } from '../actions/itemForm';
 import { createItem } from '../actions/items';
+
 import './Items.css';
 
 class ItemForm extends Component {
 
   handleOnChange = event => {
-    const { name, value } = event.target;
-    const currentItemFormData = Object.assign({}, this.props.itemFormData, {
-      [name]: value
-    })
-    this.props.updateItemFormData(currentItemFormData)
-  }
+   const { name, value } = event.target;
+   const currentItemFormData = Object.assign({}, this.props.itemFormData, {
+     [name]: value
+   })
+   this.props.updateItemFormData(currentItemFormData)
+ }
+
 
   handleOnSubmit = event => {
     event.preventDefault()
@@ -57,12 +59,14 @@ class ItemForm extends Component {
           </div>
 
           <button type="submit">Add plant</button>
+
         </form>
       </div>
 
     )
   }
 }
+
 
 const mapStateToProps = (state) => {
   return ({

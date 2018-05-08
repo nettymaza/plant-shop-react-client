@@ -16,6 +16,7 @@
   text-decoration: none;
   font-size: 16px;
   color: #354223;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* ////ITEMCARD////// */
@@ -31,14 +32,16 @@
 
 .ItemCard h3 {
   font-size: 24px;
-  color: #354223;
+  color: #354223;  
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .ItemCard p {
   max-width: 400px;
   text-align: center;
   font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .ItemCard img {
