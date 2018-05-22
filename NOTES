@@ -1,0 +1,37 @@
+import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
+
+class ItemsList extends Component {
+  constructor() {
+    super();
+      this.state = {
+        likes: 0
+      }
+  }
+
+  handleOnClick = (event) => {
+    event.preventDefault();
+    this.setState({
+      likes: this.state.likes += 1
+    })
+  }
+
+  render() {
+  //<ItemCard item={item}/>
+    const renderItems = this.props.items.map(item =>
+      <div key={item.id} >
+      <div className="ItemList">
+      <h3>{item.name}</h3>
+      <button onClick={(event) => this.handleOnClick(event)}>Like: {this.state.likes}</button>
+      </div>
+      </div>
+    );
+    return (
+      <div>
+        {renderItems}
+      </div>
+    )
+  }
+}
+
+export default ItemsList;

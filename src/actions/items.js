@@ -2,6 +2,8 @@ import { resetItemForm } from './itemForm';
 
 const API_URL = process.env.REACT_APP_API_URL;
 
+// In Redux Action Creators simply return an Action
+
 // **Action Creators**
 const setItems = items => {
   return {
@@ -17,6 +19,12 @@ const addItem = item => {
   }
 }
 
+const destroyItem = item => {
+  return {
+    type: 'DELETE_ITEM',
+  };
+}
+
 // **Async Actions**
 export const fetchItems = () => {
   return dispatch => {
@@ -26,7 +34,6 @@ export const fetchItems = () => {
       .catch(error => console.log(error));
   }
 }
-
 
 export const createItem = item => {
   return dispatch => {
@@ -41,6 +48,19 @@ export const createItem = item => {
     .then(item =>  {
       dispatch(addItem(item))
       dispatch(resetItemForm())
+    })
+    .catch(error => console.log(error))
+  }
+}
+
+export const deleteItem = item => {
+  return dispatch => {
+    return fetch(`${API_URL}/items/:id`, {
+      method: 'DELETE',
+    })
+    .then(response => response.json())
+    .then(item =>  {
+      dispatch(destroyItem(item))
     })
     .catch(error => console.log(error))
   }

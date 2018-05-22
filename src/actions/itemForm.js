@@ -1,7 +1,7 @@
 // **Action Creators**
 export const updateItemFormData = itemFormData => {
   return {
-    type: 'UPDATED_DATA',
+    type: 'INPUT_DATA',
     itemFormData
   }
 }

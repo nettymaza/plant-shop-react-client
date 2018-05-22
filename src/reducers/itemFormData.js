@@ -3,6 +3,7 @@ const initialState = {
   info: '',
   img_url: '',
 }
+
 // formErrors: {name: '', info: ''},
 // nameValid: false,
 // infoValid: false,
@@ -11,7 +12,7 @@ const initialState = {
 export default (state = initialState, action) => {
 
   switch(action.type) {
-    case 'UPDATED_DATA':
+    case 'INPUT_DATA':
     return action.itemFormData;
 
     case 'RESET_ITEM_FORM':

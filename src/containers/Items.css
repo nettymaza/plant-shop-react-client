@@ -32,7 +32,7 @@
 
 .ItemCard h3 {
   font-size: 24px;
-  color: #354223;  
+  color: #354223;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
@@ -47,6 +47,10 @@
 .ItemCard img {
   width : 300px;
   height: 300px;
+}
+
+.ItemCard button {
+  margin: 15px 0 0 45%;
 }
 
 .FormDiv {
