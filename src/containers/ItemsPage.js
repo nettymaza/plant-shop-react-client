@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 import { fetchItems } from '../actions/items';
 // import { deleteItem } from '../actions/items';
 
-import ItemCard from '../components/ItemCard';
 import ItemsList from '../components/ItemsList';
 import DetailPage from '../components/DetailPage';
 import ItemForm from './ItemForm';

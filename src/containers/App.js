@@ -5,7 +5,6 @@ import NavBar from '../components/NavBar';
 import Home from '../components/Home';
 import ItemsPage from './ItemsPage';
 
-
 import './App.css'
 
 class App extends Component {
