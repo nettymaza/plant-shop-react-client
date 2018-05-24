@@ -19,11 +19,11 @@ const addItem = item => {
   }
 }
 
-const destroyItem = item => {
-  return {
-    type: 'DELETE_ITEM',
-  };
-}
+// const destroyItem = item => {
+//   return {
+//     type: 'DELETE_ITEM',
+//   };
+// }
 
 // **Async Actions**
 export const fetchItems = () => {
@@ -53,15 +53,26 @@ export const createItem = item => {
   }
 }
 
-export const deleteItem = item => {
+export const addLike = itemId => {
   return dispatch => {
-    return fetch(`${API_URL}/items/:id`, {
-      method: 'DELETE',
+    return fetch(`${API_URL}/add-like`, {
+      method: "POST"
     })
-    .then(response => response.json())
-    .then(item =>  {
-      dispatch(destroyItem(item))
+    .then(response => {
+      console.log(response)
     })
-    .catch(error => console.log(error))
   }
 }
+
+// export const deleteItem = item => {
+//   return dispatch => {
+//     return fetch(`${API_URL}/items/:id`, {
+//       method: 'DELETE',
+//     })
+//     .then(response => response.json())
+//     .then(item =>  {
+//       dispatch(destroyItem(item))
+//     })
+//     .catch(error => console.log(error))
+//   }
+// }

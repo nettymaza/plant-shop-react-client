@@ -17,8 +17,7 @@ class ItemsList extends Component {
   }
 
   render() {
-  //<ItemCard item={item}/>
-    const renderItems = this.props.items.map(item =>
+      const renderItems = this.props.items.map(item =>
       <div key={item.id} >
       <div className="ItemList">
       <h3>{item.name}</h3>
@@ -35,3 +34,5 @@ class ItemsList extends Component {
 }
 
 export default ItemsList;
+
+  //<ItemCard item={item}/>
