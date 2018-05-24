@@ -19,6 +19,13 @@ const addItem = item => {
   }
 }
 
+// const updateLike = itemId => {
+//   return {
+//     type: 'INCREASE_LIKES',
+//     itemId,
+//   }
+// }
+
 const destroyItem = item => {
   return {
     type: 'DELETE_ITEM',
@@ -48,6 +55,19 @@ export const createItem = item => {
     .then(item =>  {
       dispatch(addItem(item))
       dispatch(resetItemForm())
+    })
+    .catch(error => console.log(error))
+  }
+}
+
+export const addLike = itemId => {
+  return dispatch => {
+    return fetch(`${API_URL}/items/${itemId}/like`, {
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then(item => {
+      console.log(item);
     })
     .catch(error => console.log(error))
   }

@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addLike } from '../actions/items';
 
-const DetailPage = ({ item })=> {
+class DetailPage extends Component {
 
-  return (
-    <div className="ItemCard">
-      <button onClick={this.handleDelete}> X </button>
-      <h3>{item.name}</h3>
-      <p>{item.info}</p>
-      <img src={item.img_url} alt={item.name}/>
-      <button>Likes: {item.likes_count}</button>
-    </div>
-  );
+  handleLikes = () => {
+    this.props.addLike(this.props.item.id)
+  }
+
+  render() {
+    return(
+      <div className="ItemCard">
+      <h3>{this.props.item.name}</h3>
+      <p>{this.props.item.info}</p>
+      <img src={this.props.item.img_url} alt={this.props.item.name}/>
+      <button onClick={this.handleLikes}>Likes: {this.props.item.likes_count}</button>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state, ownProps) => {
@@ -24,4 +30,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(DetailPage);
+export default connect(mapStateToProps, { addLike})(DetailPage);
+
+
+// <button onClick={addLike}>Likes: {this.props.item.likes_count}</button>

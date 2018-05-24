@@ -18,18 +18,17 @@ export default (state = [], action) => {
     case 'ADD_ITEM':
       return [...state, action.item];
 
-    case "INCREASE_LIKES":
-      return Object.assign({}, state, {
-        likes_count: state.likes_count + 1
-      });
-    case 'DELETE_ITEM':
-      const items = state.items.filter(item => item.id !== action.id);
-      return { items };
-
     default:
       return state;
   }
 }
 
+// case 'INCREASE_LIKES':
+//   const item = state.items.filter(item => item.id !== action.id);
+//   return [...state, action.item]
+
+// case 'DELETE_ITEM':
+//   const items = state.items.filter(item => item.id !== action.id);
+//   return { items };
 
 // return state.concat(action.item);
