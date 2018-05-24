@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ItemCard from './ItemCard'
 // import { addLike } from '../actions/items';
 
 const DetailPage = ({ item })=> {
