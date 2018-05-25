@@ -19,12 +19,12 @@ const addItem = item => {
   }
 }
 
-// const updateLike = itemId => {
-//   return {
-//     type: 'INCREASE_LIKES',
-//     itemId,
-//   }
-// }
+const updateLike = item => {
+  return {
+    type: 'INCREASE_LIKE',
+    item,
+  }
+}
 
 const destroyItem = item => {
   return {
@@ -67,7 +67,7 @@ export const addLike = itemId => {
     })
     .then(response => response.json())
     .then(item => {
-      console.log(item);
+      dispatch(updateLike(item));
     })
     .catch(error => console.log(error))
   }

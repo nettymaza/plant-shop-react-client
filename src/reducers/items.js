@@ -8,7 +8,6 @@
 //
 // Call non-pure functions, e.g. Date.now() or Math.random().
 
-
 // Items Reducer
 export default (state = [], action) => {
   switch(action.type) {
@@ -17,6 +16,15 @@ export default (state = [], action) => {
 
     case 'ADD_ITEM':
       return [...state, action.item];
+
+    case 'INCREASE_LIKE':
+      state.forEach( item => {
+        if (item.id === action.item.id) {
+          item.likes_count += 1;
+        }
+      })
+
+      return [...state]
 
     default:
       return state;
