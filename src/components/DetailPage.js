@@ -30,7 +30,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, { addLike})(DetailPage);
-
-
-// <button onClick={addLike}>Likes: {this.props.item.likes_count}</button>
+export default connect(mapStateToProps, { addLike })(DetailPage);

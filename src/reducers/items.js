@@ -18,22 +18,11 @@ export default (state = [], action) => {
       return [...state, action.item];
 
     case 'INCREASE_LIKE':
-      state.forEach( item => {
-        if (item.id === action.item.id) {
-          item.likes_count += 1;
-        }
-      })
-
-      return [...state]
-
+      return state.map( item => item.id === action.item.id ? action.item : item)
     default:
       return state;
   }
 }
-
-// case 'INCREASE_LIKES':
-//   const item = state.items.filter(item => item.id !== action.id);
-//   return [...state, action.item]
 
 // case 'DELETE_ITEM':
 //   const items = state.items.filter(item => item.id !== action.id);

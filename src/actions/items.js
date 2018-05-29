@@ -26,11 +26,12 @@ const updateLike = item => {
   }
 }
 
-const destroyItem = item => {
-  return {
-    type: 'DELETE_ITEM',
-  };
-}
+// const destroyItem = item => {
+//   return {
+//     type: 'DELETE_ITEM',
+//     item,
+//   }
+// }
 
 // **Async Actions**
 export const fetchItems = () => {
@@ -73,15 +74,15 @@ export const addLike = itemId => {
   }
 }
 
-export const deleteItem = item => {
+export const deleteItem = itemId => {
   return dispatch => {
-    return fetch(`${API_URL}/items/:id`, {
+    return fetch(`${API_URL}/items/${itemId}`, {
       method: 'DELETE',
     })
     .then(response => response.json())
     .then(item =>  {
-      dispatch(destroyItem(item))
+      console.log(item)
     })
-    .catch(error => console.log(error))
+
   }
 }
