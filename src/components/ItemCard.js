@@ -10,13 +10,13 @@ class ItemCard extends Component {
 
   increaseLike = () => {
     this.setState({
-      likes: this.state.likes += 1
+      likes: this.state.likes + 1
     })
   }
 
   render() {
     return(
-      <button onClick={() => this.increaseLike()}>Likes: {this.state.likes}</button>
+      <button onClick={this.increaseLike}>Likes: {this.state.likes}</button>
     );
   }
 }
