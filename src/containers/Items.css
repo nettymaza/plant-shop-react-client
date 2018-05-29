@@ -5,7 +5,7 @@
   margin: 6px;
   background: whitesmoke;
   width: 30%;
-  height: 50px;
+  height: auto;
 }
 
 .ItemList:hover {
