@@ -1,6 +1,30 @@
+// import React from 'react';
+// import ItemCard from './ItemCard'
+// import { Link } from 'react-router-dom';
+//
+// const ItemsList = ({ items }) => {
+//
+//   const renderItems = items.map(item =>
+//   <Link key={item.id} to={`/items/${item.id}`}>
+//     <div className="ItemList">
+//       <h3>{item.name}</h3>
+//       <ItemCard/>
+//     </div>
+//   </Link>
+// );
+//
+//   return (
+//     <div>
+//       {renderItems}
+//     </div>
+//   );
+// };
+//
+// export default ItemsList;
+
 import React from 'react';
 import { connect } from 'react-redux'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { addLike } from '../actions/items'
 
 const ItemsList = ({ items, addLike, totalLikes }) => {
@@ -12,7 +36,7 @@ const sortedItems = filteredItems.sort(function(a, b) {
 })
 
   const renderItems = filteredItems.map(item =>
-      <div className="ItemList">
+      <div key={item.id} className="ItemList">
         <h3>{item.name}</h3>
         <h4>{item.likes_count}</h4>
         <button onClick={() => addLike(item.id)}>Like</button>
